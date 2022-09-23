@@ -2,9 +2,9 @@
 
 namespace Guywarner\LaravelSinglestoreFulltext\Tests;
 
+use Guywarner\LaravelSinglestoreFulltext\LaravelSinglestoreFulltextServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Guywarner\LaravelSinglestoreFulltext\LaravelSinglestoreFulltextServiceProvider;
 
 class TestCase extends Orchestra
 {
