@@ -1,6 +1,6 @@
 {
     "name": "guywarner/laravel-singlestore-fulltext",
-    "description": "Package to use SingleStore DB's match() function for full text search adding whereMatch() to Models",
+    "description": "Package to use SingleStore DB's match() function for full text search adding Model::match()->get() to Models",
     "keywords": [
         "guywarner",
         "laravel",
