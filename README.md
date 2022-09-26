@@ -1,4 +1,4 @@
-# Small trait to allow match using SingleStore's full text indexing'
+# Package to use SingleStore DB's match() function for full text search adding whereMatch() to Models
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/guywarner/laravel-singlestore-fulltext.svg?style=flat-square)](https://packagist.org/packages/guywarner/laravel-singlestore-fulltext)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/guywarner/laravel-singlestore-fulltext/run-tests?label=tests)](https://github.com/guywarner/laravel-singlestore-fulltext/actions?query=workflow%3Arun-tests+branch%3Amain)
