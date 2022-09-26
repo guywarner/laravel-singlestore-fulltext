@@ -2,7 +2,6 @@
 
 namespace Guywarner\LaravelSinglestoreFulltext;
 
-use Guywarner\LaravelSinglestoreFulltext\Commands\LaravelSinglestoreFulltextCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
