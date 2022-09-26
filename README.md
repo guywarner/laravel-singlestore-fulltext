@@ -19,7 +19,11 @@ You can install the package via composer:
 composer require guywarner/laravel-singlestore-fulltext
 ```
 
-Add your FULLTEXT keys.
+Add your FULLTEXT index. If the index is missing SDB will error with:
+
+```
+Can't find FULLTEXT index matching the column list
+```
 
 Extend the model you want to search:
 
