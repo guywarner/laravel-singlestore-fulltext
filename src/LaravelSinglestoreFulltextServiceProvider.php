@@ -15,7 +15,6 @@ class LaravelSinglestoreFulltextServiceProvider extends PackageServiceProvider
          *
          * More info: https://github.com/spatie/laravel-package-tools
          */
-        $package
-            ->name('laravel-singlestore-fulltext');
+        $package->name('laravel-singlestore-fulltext');
     }
 }
