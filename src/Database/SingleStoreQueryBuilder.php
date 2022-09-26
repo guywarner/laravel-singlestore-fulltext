@@ -1,4 +1,5 @@
 <?php
+namespace Guywarner\LaravelSinglestoreFulltext\Database;
 
 class SingleStoreQueryBuilder extends \Illuminate\Database\Query\Builder
 {
