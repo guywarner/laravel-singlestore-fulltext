@@ -5,7 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/guywarner/laravel-singlestore-fulltext/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/guywarner/laravel-singlestore-fulltext/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/guywarner/laravel-singlestore-fulltext.svg?style=flat-square)](https://packagist.org/packages/guywarner/laravel-singlestore-fulltext)
 
-A simple package to add a new match() function to Laravel models
+A simple package to add (match())[https://docs.singlestore.com/managed-service/en/reference/sql-reference/full-text-search-functions/match.html] function to Laravel models
 
 ```php
 User::match(['first_name', 'last_name'], 'Guy Warner')->get()
@@ -19,37 +19,22 @@ You can install the package via composer:
 composer require guywarner/laravel-singlestore-fulltext
 ```
 
-You can publish and run the migrations with:
+Add your FULLTEXT keys.
 
-```bash
-php artisan vendor:publish --tag="laravel-singlestore-fulltext-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="laravel-singlestore-fulltext-config"
-```
-
-This is the contents of the published config file:
+Extend the model you want to search:
 
 ```php
-return [
-];
-```
+use Guywarner\LaravelSinglestoreFulltext\Models\SingleStoreModel;
 
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="laravel-singlestore-fulltext-views"
+class Mopdel extends SingleStoreModel
+{
+}
 ```
 
 ## Usage
 
 ```php
-$laravelSinglestoreFulltext = new Guywarner\LaravelSinglestoreFulltext();
-echo $laravelSinglestoreFulltext->echoPhrase('Hello, Guywarner!');
+Model::match(['column1', 'column2'], 'search term')->get();
 ```
 
 ## Testing
@@ -65,10 +50,6 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
 ## Credits
 
