@@ -22,8 +22,6 @@
     "require-dev": {
         "nunomaduro/collision": "^6.0",
         "nunomaduro/larastan": "^2.0.1",
-        "pestphp/pest": "^1.21",
-        "pestphp/pest-plugin-laravel": "^1.1",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-phpunit": "^1.0",
@@ -41,9 +39,7 @@
     },
     "scripts": {
         "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
+        "test": "vendor/bin/phpunit tests"
     },
     "config": {
         "sort-packages": true,
