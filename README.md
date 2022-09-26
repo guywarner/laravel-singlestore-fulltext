@@ -5,7 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/guywarner/laravel-singlestore-fulltext/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/guywarner/laravel-singlestore-fulltext/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/guywarner/laravel-singlestore-fulltext.svg?style=flat-square)](https://packagist.org/packages/guywarner/laravel-singlestore-fulltext)
 
-A simple package to add a new match() function to Laravel models
+A simple package to add (match())[https://docs.singlestore.com/managed-service/en/reference/sql-reference/full-text-search-functions/match.html] function to Laravel models
 
 ```php
 User::match(['first_name', 'last_name'], 'Guy Warner')->get()
