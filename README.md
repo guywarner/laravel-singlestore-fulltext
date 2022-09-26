@@ -19,37 +19,22 @@ You can install the package via composer:
 composer require guywarner/laravel-singlestore-fulltext
 ```
 
-You can publish and run the migrations with:
+Add your FULLTEXT keys.
 
-```bash
-php artisan vendor:publish --tag="laravel-singlestore-fulltext-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="laravel-singlestore-fulltext-config"
-```
-
-This is the contents of the published config file:
+Extend the model you want to search:
 
 ```php
-return [
-];
-```
+use Guywarner\LaravelSinglestoreFulltext\Models\SingleStoreModel;
 
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="laravel-singlestore-fulltext-views"
+class Mopdel extends SingleStoreModel
+{
+}
 ```
 
 ## Usage
 
 ```php
-$laravelSinglestoreFulltext = new Guywarner\LaravelSinglestoreFulltext();
-echo $laravelSinglestoreFulltext->echoPhrase('Hello, Guywarner!');
+Model::match(['column1', 'column2'], 'search term')->get();
 ```
 
 ## Testing
@@ -65,10 +50,6 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
 ## Credits
 
