@@ -1,4 +1,5 @@
 <?php
+
 namespace Guywarner\LaravelSinglestoreFulltext\Models;
 
 use Guywarner\LaravelSinglestoreFulltext\Database\SingleStoreQueryBuilder;
